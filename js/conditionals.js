@@ -104,7 +104,8 @@ switch (speed) {
 /* STEP 6: Ternary operator
 This piece of syntax is a bit less typing, but it is harder to read */
 let breakMessage = document.querySelector('#breakTime');
-let coffeeBreak = true;
+let lunchBreak = true;
+lunchBreak ? breakMessage.textContent = "Lunch time!" : breakMessage.textContent = "Keep working.";
 
 
 // This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
