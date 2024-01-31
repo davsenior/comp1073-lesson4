@@ -77,21 +77,27 @@ windSpeed.addEventListener('change', getWindSpeed);
 function getWindSpeed() {
 let speed = Number(windSpeed.value);
 // STEP 5a: Build the SWITCH code block
-
+switch (speed) {
 	// STEP 5b: Build out four cases, followed by a default
-
+	case 100:
 		// 100 km/h
 		windComment.textContent = speed + 'km/h - Holy schmoly! Hold on to your hat!';
-
+		break;
+	case 75:
 		// 75 km/h
 		windComment.textContent = speed + 'km/h - It\'s a-howling out there!';
-
+		break;
+	case 50:
 		// 50 km/h
 		windComment.textContent = speed + 'km/h - Quite gusty out there, today.';
-
+		break;
+	case 25:
 		// 25 km/h
 		windComment.textContent = speed + 'km/h - A wee bit breezy.';
-
+		break;
+	default:
+		windComment.textContent = "Very calm today.";
+	}
 } // End of getWindSpeed() function
 
 
